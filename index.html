@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaction jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #content {
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Hello, Welcome to my application jQuery</h1>
+        <button id="toggleButton">show/hide message</button>
+        <p id="message" class="hidden">!Press button to activate the application:</p>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#toggleButton").click(function () {
+                $("#message").toggleClass("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
